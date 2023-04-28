@@ -1,0 +1,8 @@
+flowers=["Rose","Jasmine","Lilly","Lotus","Tulips"]
+print(flowers)
+flowers.sort()
+print(flowers)
+flowers.reverse()
+print(flowers)
+flowers.sort(reverse=True)
+print(flowers)
