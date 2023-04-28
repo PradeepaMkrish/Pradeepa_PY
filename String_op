@@ -1,0 +1,8 @@
+flowers=["Rose","Jasmine","Lilly","Lotus","Tulips"]
+print(flowers)
+flowers.append("rain lillies")
+print(flowers)
+flowers.insert(1,"mariegold")
+print(flowers)
+flowers.insert(-3,"Cherry flowers")#every time when add values from start or end ( in between index would be index-1)
+print(flowers)
