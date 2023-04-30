@@ -1,0 +1,4 @@
+for num1 in ["tomato","onion","Garlic"]:
+  for num2 in ["soup","cnady"]:
+    print("")
+  print(num1,num2)
