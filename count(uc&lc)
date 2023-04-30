@@ -1,0 +1,12 @@
+#Conting uppercase and lowercase letters in string
+name=input("Enter a name:")
+count=0
+cn=0
+for i in name:
+  if i.isupper():
+     count=count+1
+print(count,"uppercase letters")
+for j in name:
+  if j.islower():
+     cn=cn+1
+print(cn,"lowecase letters")
