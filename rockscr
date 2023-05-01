@@ -1,0 +1,26 @@
+#Rock Paper Scissor game
+print("Enter your choice from the following \n1.Rock\n2.Paper\n3.Scisorrs")
+user1=input("User1:Enter your choice from above:")
+user2=input("User2:Enter your choice from above:")
+print("user1 choosed",user1)
+print("User2 choosed",user2)
+if(user1=='Rock' and user2=='Paper'):
+  print("User2 wins")
+elif(user1=='Rock' and user2=='Scissors'):
+  print("User1 wins")
+elif(user1=='Paper' and user2=='Rock'):
+  print("User2 wins")
+elif(user1=='Paper' and user2=='Scissors'):
+  print("User2 wins")
+elif(user1=='Scissors' and user2=='Paper'):
+  print("User1 Wins")
+elif(user1=='Scissors' and user2=='Rock'):
+  print("User 2 wins")
+elif(user1=='Rock' and user2=='Rock'):
+  print("The game is tie")
+elif(user1=='Paper' and user2=='Paper'):
+  print("The game is tie")
+elif(user1=='Scissors' and user2=='Scissors'):
+  print("The game is tie")
+else:
+  print("you chosed invalid option")
