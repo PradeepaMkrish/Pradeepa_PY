@@ -1,0 +1,22 @@
+car = {
+  "brand":"Honda","model":"Civic","model":"Accord","Year":2023,"Year":2020,"transmission":["automatic","mannual","hybrid"]} #Cannot duplicate the dictionaries,
+  #if two available takes latest
+print(car)
+car.update({"Year":1998})#update a item in dictionary
+print(len(car)) #print lenght of dict if two keys with same consider as one
+print(car["brand"])#prints particular item
+y=car.get("brand")#print particular item with get method
+print(y)
+x=car["Year"] 
+print(x)
+print(type(car)) #print datatype
+print(type(car.get("brand"))) #prints datat types of particular item in dict
+print(type(car.get("Year")))
+print(type(car.get("transmission")))
+car["colour"]="red"
+z=car.keys()
+print(z)
+car.popitem()# delets the last item in dictionary
+print(car)
+car.pop("model")# delets specified item
+print(car)
