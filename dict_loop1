@@ -1,0 +1,25 @@
+favorite_languages = {
+ 'jen': 'python',
+ 'sarah': 'c',
+ 'edward': 'ruby',
+ 'phil': 'python',
+ }
+
+for n in favorite_languages.keys(): #for name in favorite_languages: will also give you the same result
+  print(n)
+print()
+#Two different ways of outputting values
+for d in favorite_languages.values():
+  print(d)
+
+print()
+for x,y in favorite_languages.items():
+  print(y) # y is values
+  #print(x,y)
+for x,y in favorite_languages.items():
+  print(x) # x is keys
+for name in favorite_languages.keys():
+ print(name.title() + ", thank you for taking the poll.")
+ print()
+for name in sorted(favorite_languages.keys()):
+ print(name.title() , ", thank you for taking the poll.")
