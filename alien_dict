@@ -1,0 +1,24 @@
+#kids choosing alien by using color
+alien1={
+    'name':'Caitian',
+    'color':'green',
+    'height':'3434',
+    'eyes':'small'
+}
+alien2={
+    'name':'Calamarian',
+    'color':'yellow',
+    'height':'888',
+    'eyes':'big'
+}
+alien3={
+    'name':'alcinite',
+    'color':'red',
+    'height':'4656',
+    'eyes':'medium'
+}
+color=input("The color of the aliend is:")
+if alien1['color']==color or alien2['color']==color or alien3['color']==color :
+  print("Attention!,A kid witnessed the alien")
+else:
+  print("No aliens have been found")
