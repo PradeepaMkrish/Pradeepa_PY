@@ -1,0 +1,14 @@
+
+favorite_languages = {
+ 'jen': 'python',
+ 'sarah': 'c',
+ 'edward': 'ruby',
+ 'phil': 'python',
+ 'laya':'javascript'
+}
+my_list=["jen","sarah","edward","Raga","maya"]
+for name in my_list:
+  if name in favorite_languages.keys():
+    print("Thank you for polling\t"+name.title())
+  else:
+    print(name.title()+"\twhat is your favourite language?")
