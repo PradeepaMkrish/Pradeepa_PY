@@ -1,0 +1,11 @@
+#Displaying city information
+mycity={
+     1 : {"name":"Toronto","population":65676,"fact":"Ontario River"},
+     2 : {"name":"Newyork","population":65676,"fact":"Niagara"},
+     3 : {"name":"Paris","population":65676,"fact":"Nile"},
+     4 : {"name":"Delhi","population":65676,"fact":"Yamuna"}
+    }
+for c_id,c_info in mycity.items():
+    print("\nCity ",c_id)
+    for key in c_info:
+        print(key + ':', c_info[key])
