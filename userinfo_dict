@@ -1,0 +1,19 @@
+users = {
+'vinoth':
+{
+ 'fname' : 'Vinoth',
+ 'lname': 'krishna',
+ 'location': 'paris',
+},
+'Raga':{
+ 'fname' : 'Raga',
+ 'lname': 'malya',
+ 'location': 'France',
+},
+}
+for uname,uinfo in users.items():
+ print("Username:",uname)
+ fullname=uinfo["fname"]+" "+uinfo["lname"]
+ location=uinfo["location"]
+ print("fullname:"+fullname.title())
+ print("location:"+location.title())
