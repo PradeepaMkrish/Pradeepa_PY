@@ -1,0 +1,20 @@
+#pets
+dog={
+    "name":"jony",
+    "owner":"Rayan",
+    "color":"black"
+    
+}
+cat={
+    "name":"kitty",
+    "owner":"Reethu",
+    "color":"white"
+}
+bird={
+    "name":"cooku",
+    "owner":"Teena",
+    "color":"greenish yellow"
+}
+pets=[dog,cat,bird]
+for pname in pets:
+  print(pname["name"].title(), "is owned by",pname["owner"], "and the color is",pname["color"])
