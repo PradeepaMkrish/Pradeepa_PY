@@ -1,0 +1,7 @@
+menu = {
+    "coffee":1.25,
+    "Tea":2.25,
+    "iced coffee":3.00
+}
+for key,value in menu.items():
+  print(key,"$",value)
