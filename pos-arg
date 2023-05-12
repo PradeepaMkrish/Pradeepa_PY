@@ -1,0 +1,7 @@
+def myPet(typePet, namePet):
+  print("Your", typePet, namePet, "is adorable!")
+
+
+#main
+myPet("dog", "Coco")
+myPet("lily", "cat") ## oopsies!
