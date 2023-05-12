@@ -1,0 +1,5 @@
+def pwr(n):
+    return n**5
+n = int(input("Enter a number  = "))
+print("fifthe power of the give number is")
+print(pwr(n))
