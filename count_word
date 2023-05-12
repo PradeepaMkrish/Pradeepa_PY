@@ -1,0 +1,7 @@
+def count(word):
+  print(word,'has',len(word),'characters')
+
+userin=input("Enter a word and q to quit:")
+while userin!="q":
+  count(userin)
+  userin=input("Enter a word and q to quit:")
