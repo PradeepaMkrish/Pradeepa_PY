@@ -1,0 +1,22 @@
+def addition(n1,n2):
+  add=n1+n2
+  print("Additon")
+  print("The result is",add)
+def subtraction(n1,n2):
+  print("Subtraction")
+  sub=n1-n2
+  print("The result is",sub)
+def multiplication(n1,n2):
+  print("Multiplication")
+  mul=n1*n2
+  print("The result is",mul)
+def division(n1,n2):
+  print("Division")
+  div=n1/n2
+  print("The result is",div)
+n1=int(input("Enter first number to perform operations:"))
+n2=int(input("Enter second number  to perform operaions:"))
+addition(n1,n2)
+subtraction(n1,n2)
+multiplication(n1,n2)
+division(n1,n2)
