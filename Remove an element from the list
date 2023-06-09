@@ -1,0 +1,12 @@
+#2.Programs to create list by getting user input and remove particular element
+new_list=[]
+i=0
+n=int(input("Enter number of elements to add in the list:"))
+for i in range (n):
+  ele=int(input())
+  new_list.append(ele)
+print("my list:",new_list)
+r=int(input("Enter element you want to remove:"))
+if r in new_list:
+  new_list.remove(r)
+print("List after removing element of your choice:",new_list)
