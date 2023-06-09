@@ -1,0 +1,8 @@
+from google.colab import drive
+drive.mount('/content/gdrive') #importing google 
+
+import sys #system- specific functions
+sys.path.append('/content/gdrive/MyDrive/colab Notebooks')  # you can give your folders path 
+
+import os
+os.chdir('/content/gdrive/MyDrive/Colab Notebooks')
