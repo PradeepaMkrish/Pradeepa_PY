@@ -1,0 +1,27 @@
+class Restaurant():
+  def __init__(self, name, cuisine):
+    self.restaurant_name=name
+    self.cuisine_type=cuisine
+  def describe_restaurant(self):
+    print(self.restaurant_name + " serves delicious " + self.cuisine_type)
+  def open_restaurant(self):
+    print(self.restaurant_name + " is open on all 7 days\nWeekdays 11am to 5pm\nWeekends 8am to 8pm")
+
+restaurant = Restaurant('yummy Tummy', 'Asian')
+print("1."+restaurant.restaurant_name)
+print(restaurant.cuisine_type)
+
+restaurant.describe_restaurant()
+
+restaurant1 = Restaurant('Food world', 'Pizza and Pasta')
+print("2."+restaurant1.restaurant_name)
+print(restaurant1.cuisine_type)
+
+restaurant1.describe_restaurant()
+
+
+restaurant3 = Restaurant('Frooti', 'fresh juices')
+print("3."+restaurant3.restaurant_name)
+print(restaurant3.cuisine_type)
+
+restaurant3.describe_restaurant()
