@@ -1,0 +1,10 @@
+#Program to find given number is odd or even (with arguments)
+def odd_even(n):
+  if (n%2==0):
+    print("The given number",n,"is even")
+  else: 
+   print("The given number",n,"is odd")
+#main code
+print("Enter a number to find odd or even:")
+x=int(input());
+odd_even(x)
