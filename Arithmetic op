@@ -1,0 +1,21 @@
+class Operations:
+  def __init__(self, a, b):
+    self.a=a
+    self.b=b
+  def add(self):
+    print("addition result of",self.a,"and",self.b,"is",self.a+self.b)
+  def sub(self):
+    print("Subtraction result of",self.a,"and",self.b,"is",self.a-self.b)
+  def mul(self):
+    print("Multiplication result of",self.a,"and",self.b,"is",self.a*self.b)
+  
+print("Enter two numbers to find Arithmetic operations")
+n1=int(input())
+n2=int(input())
+
+op = Operations(n1,n2)
+op.add()
+op1 = Operations(n1,n2)
+op1.sub()
+op3 = Operations(n1,n2)
+op3.mul()
