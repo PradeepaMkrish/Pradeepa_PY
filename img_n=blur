@@ -1,0 +1,11 @@
+# importing libraries
+import cv2 # OPENCV
+import numpy as np
+from google.colab.patches import cv2_imshow
+from matplotlib import *
+# write a program to accept an image and show the smoothened version of the image (colour )
+# reading image
+img = cv2.imread("flower.jpg")
+cv2_imshow(img)
+img = cv2.medianBlur(img, 5) # smoothing it out
+cv2_imshow(img)
