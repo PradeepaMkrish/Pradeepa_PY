@@ -1,0 +1,30 @@
+#Task 3: Make a class called User. Create two attributes called first_name and last_name, and then create several other attributes that are typically stored in a user profile. 
+#Make a method called describe_user() that prints a summary of the user’s information. Make another method called greet_user() that prints a personalized greeting to the user. 
+#Create several instances representing different users, and call both methods for each user.
+class user():
+  def __init__(self, fname,lname,age,phno,adr ):
+    self.user_fname=fname
+    self.user_lname=lname
+    self.user_age=age
+    self.user_phone_no=phno
+    self.user_address=adr
+  def describe_user(self):
+    print("UserName:"+self.user_fname+" "+self.user_lname)
+    print("age:",self.user_age,"\nPhone number:",self.user_phone_no,"\naddress:",self.user_address)
+    
+  def greet(self):
+    print("Hello "+self.user_fname+" "+self.user_lname)
+    print()
+#main code
+usr = user('Reena', 'Raj',25,1123213223,"12,gardenway,Ontario")
+usr.describe_user()
+usr.greet()
+
+usr1 = user('Teena', 'Ram',24,234343,"15,Tantium road,Ontario")
+usr1.describe_user()
+usr1.greet()
+
+
+usr2 = user('Kamali', 'Rajesh',28,565767,"23,Hill way street,Ontario")
+usr2.describe_user()
+usr2.greet()
