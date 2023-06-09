@@ -1,0 +1,11 @@
+class vehicle:
+  color1="blue"
+  color2="red"
+  type1="two wheeler"
+  type2="four wheeler"
+  transmission1="Manual"
+  transmission2="automatic"
+bicycle=vehicle()
+car=vehicle()
+print("The details of the requested bicyle model is:",bicycle.color1,bicycle.type1,bicycle.transmission1)
+print("The details of the requested car model is:",car.color2,car.type2,car.transmission2)
