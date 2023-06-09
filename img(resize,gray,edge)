@@ -1,0 +1,28 @@
+# importing libraries
+import cv2 # OPENCV
+import numpy as np
+from google.colab.patches import cv2_imshow
+from matplotlib import *
+# reading image
+img = cv2.imread("face.jpg")
+#print(img.shape)
+img = cv2.resize(img, (100,120))
+# display image using openCV
+cv2_imshow(img)
+color_edges = cv2.Canny(img, threshold1=100,threshold2=500) #showing the edges 
+cv2_imshow(color_edges)
+print(color_edges.shape)
+# Edge extraction - convert to grayscale, blur the image, then extract edges
+
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # converting to grayscale
+cv2_imshow(gray)
+
+
+gray = cv2.medianBlur(gray, 3) # smoothing it out
+
+cv2_imshow(gray)
+
+edges = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C,
+		cv2.THRESH_BINARY, 15 ,15) # detecting the edges
+
+cv2_imshow(edges)
