@@ -1,0 +1,19 @@
+2#area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+class triangle:
+  #constructor
+  def __init__(self,a, b, c):
+    self.a=a
+    self.b=b
+    self.c=c
+    #method
+  def triangle_area(self):
+    t=self.a+self.b+self.c/2
+    area=(t*(t-self.a)*(t-self.b)*(t-self.c)) ** 0.5
+    print("Area of the triangle for above given sides is ",area)
+#main code
+print("Enter three sides of triangle to find its area")
+s1=float(input())
+s2=float(input())
+s3=float(input())
+Area = triangle(s1,s2,s3)
+Area.triangle_area()
