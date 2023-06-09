@@ -1,0 +1,28 @@
+class Dog():
+  # this is a constructor - a method which is called automatically 
+  # when an object is created.
+  def __init__(self, n, age):  
+    # name and age are attributes here!!
+    self.name = n
+    self.age = age
+    self.breed = "husky"
+    print("testing")
+    
+  def printInfo(self):
+    print("Your dog", self.name, " is ", self.age, "years old.")
+    print("Your dog is a",self.breed,".")
+
+  def sit(self):
+    print(self.name, " is now sitting.")
+
+# self - its a parameter that allows to use functions and variables in your main code. 
+# It also links the methods/variables to the class itself.
+# main code 
+#lets create an object - or an instance of a class. AKA instantiation
+#dogA = Dog()
+dogA = Dog("Poppy", 2)
+dogA.sit()
+dogA.breed="puppy"
+print(dogA.breed)
+dogb=Dog("Scobby",3)
+dogb.printInfo()
