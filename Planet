@@ -1,0 +1,24 @@
+#Created class Planet(). 
+#Each planet will have its size(diameter) and color attribute
+class Planet:
+   def __init__(self,size,color):
+    self.size=size
+    self.color=color
+   def get_Area(self):
+    area=3.14*self.size
+    return  area
+   def get_diameter(self):
+    return self.size
+#Comparing area to find largest Planet
+   def compare(self,p2):
+     if self.get_Area()>p2.get_Area():
+       print("The blue planet is larger")
+     elif self.get_Area()<p2.get_Area():
+       print("The red planet is larger")
+     else:
+       print("Both are same size")
+p1=Planet(400,'blue')
+print('A new planet is born: ', p1.color ,' and '+str(p1.size)+'km in size')
+p2=Planet(300,'yellow')
+print('A new planet is born: ', p2.color ,' and '+str(p2.size)+'km in size')
+p1.compare(p2)
