@@ -1,0 +1,13 @@
+#Program to removevtwo elements from the list
+#3.Programs to create list by getting user input and swaping any two elements
+new_list=[]
+n=int(input("Enter number of elements to add in the list:"))
+for i in range (n):
+  ele=int(input())
+  new_list.append(ele)
+print("my list:",new_list)
+print("Enter two positions you want to swap:")
+n1=int(input())
+n2=int(input())
+new_list[n1-1],new_list[n2]=new_list[n2],new_list[n1-1]
+print("New list after swaping:",new_list)
