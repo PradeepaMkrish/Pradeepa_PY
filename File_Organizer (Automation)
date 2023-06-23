@@ -1,0 +1,87 @@
+from os import scandir, rename
+from os.path import splitext, exists, join
+from shutil import move
+from time import sleep
+
+import logging
+
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+#Include path of the source directory
+source_dir = ""
+#Include path of the destination directory
+dest_dir_image = ""
+#Include path of the destination directory
+dest_dir_documents = ""
+
+
+image_extensions = [".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".gif", ".webp", ".tiff", ".tif", ".psd", ".raw",
+                    ".k25", ".bmp", ".dib", ".jp2", ".j2k", ".jpf", ".jpf"] # Extentions for image files
+
+document_extensions = [".doc", ".docx", ".odt",
+                       ".pdf", ".xls", ".xlsx", ".ppt", ".pptx"] #Extentions for document files
+
+#Funtion to rename if file with the same name exits
+def change_name(dest, name):
+    filename, extension = splitext(name)
+    counter = 1
+    # If with same name exists add number to make it unique
+    while exists(f"{dest}/{name}"):
+        name = f"{filename}({str(counter)}){extension}"
+        counter += 1
+
+    return name
+
+
+def move_todest(dest, entry, name):
+    if exists(f"{dest}/{name}"):
+        unique_name = change_name(dest, name)
+        oldName = join(dest, name)
+        newName = join(dest, unique_name)
+        rename(oldName, newName)
+    move(entry, dest)
+
+
+class MoverHandler(FileSystemEventHandler):
+    #This function runs if there is a change in "SOURCE DIRECTORY"
+    def on_modified(self, event):
+        with scandir(source_dir) as entries:
+            for entry in entries:
+                name = entry.name
+                self.check_image_ext(entry, name)
+                self.check_document_ext(entry, name)
+
+
+#Method to check all image files with both upper and lower case extentions
+    def check_image_ext(self, entry, name): 
+        for image_extension in image_extensions:
+            if name.endswith(image_extension) or name.endswith(image_extension.upper()):
+                move_todest(dest_dir_image, entry, name)
+                logging.info(f"Moved image file {name} to destination ")
+
+#Method to check all document files with both upper and lower case extentions
+    def check_document_ext(self, entry, name): 
+        for documents_extension in document_extensions:
+            if name.endswith(documents_extension) or name.endswith(documents_extension.upper()):
+                move_todest(dest_dir_documents, entry, name)
+                logging.info(f"Moved document file {name} to destination ")
+
+
+# Main code
+#Uses watchdog to monitor directories specified and logs events generated:
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO,
+                        format='%(asctime)s - %(message)s',
+                        datefmt='%Y-%m-%d %H:%M:%S')
+    path = source_dir
+    event_handler = MoverHandler()
+    observer = Observer()
+    observer.schedule(event_handler, path, recursive=True)
+    observer.start()
+    try:
+        while True:
+            sleep(10)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
